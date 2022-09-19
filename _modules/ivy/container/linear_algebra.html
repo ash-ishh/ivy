@@ -1156,7 +1156,8 @@
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        x</span>
-<span class="sd">            input array or container having shape (..., M, M) and whose innermost two dimensions form square matrices. Should have a floating-point data type.</span>
+<span class="sd">            input array or container having shape (..., M, M) and whose innermost two</span>
+<span class="sd">            dimensions form square matrices. Should have a floating-point data type.</span>
 <span class="sd">        key_chains</span>
 <span class="sd">            The key-chains to apply or not apply the method to. Default is None.</span>
 <span class="sd">        to_apply</span>
@@ -1171,7 +1172,8 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">        ret</span>
-<span class="sd">            This function returns a container containing two values for each square matrix.</span>
+<span class="sd">            This function returns a container containing two values for each square</span>
+<span class="sd">            matrix.</span>
 <span class="sd">            Each value of output will have -</span>
 <span class="sd">                sign:</span>
 <span class="sd">                A number representing the sign of the determinant.</span>
@@ -1203,7 +1205,6 @@
             <span class="n">to_apply</span><span class="o">=</span><span class="n">to_apply</span><span class="p">,</span>
             <span class="n">prune_unapplied</span><span class="o">=</span><span class="n">prune_unapplied</span><span class="p">,</span>
             <span class="n">map_sequences</span><span class="o">=</span><span class="n">map_sequences</span><span class="p">,</span>
-            <span class="n">out</span><span class="o">=</span><span class="n">out</span><span class="p">,</span>
         <span class="p">)</span></div>
 
 <div class="viewcode-block" id="ContainerWithLinearAlgebra.slogdet"><a class="viewcode-back" href="../../../data_classes/container/linear_algebra/ContainerWithLinearAlgebra.html#ivy.container.linear_algebra.ContainerWithLinearAlgebra.slogdet">[docs]</a>    <span class="k">def</span> <span class="nf">slogdet</span><span class="p">(</span>
@@ -1221,7 +1222,8 @@
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        self</span>
-<span class="sd">            input container having shape (..., M, M) and whose innermost two dimensions form square matrices. Should have a floating-point data type.</span>
+<span class="sd">            input container having shape (..., M, M) and whose innermost two dimensions</span>
+<span class="sd">            form square matrices. Should have a floating-point data type.</span>
 <span class="sd">        key_chains</span>
 <span class="sd">            The key-chains to apply or not apply the method to. Default is None.</span>
 <span class="sd">        to_apply</span>
@@ -1236,7 +1238,8 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">        ret</span>
-<span class="sd">            This function returns container containing two values for each square matrix.</span>
+<span class="sd">            This function returns container containing two values for each square</span>
+<span class="sd">            matrix.</span>
 <span class="sd">            Each value of output will have -</span>
 <span class="sd">                sign:</span>
 <span class="sd">                A number representing the sign of the determinant.</span>
@@ -1263,7 +1266,6 @@
             <span class="n">to_apply</span><span class="p">,</span>
             <span class="n">prune_unapplied</span><span class="p">,</span>
             <span class="n">map_sequences</span><span class="p">,</span>
-            <span class="n">out</span><span class="o">=</span><span class="n">out</span><span class="p">,</span>
         <span class="p">)</span></div>
 
 <div class="viewcode-block" id="ContainerWithLinearAlgebra.static_solve"><a class="viewcode-back" href="../../../data_classes/container/linear_algebra/ContainerWithLinearAlgebra.html#ivy.container.linear_algebra.ContainerWithLinearAlgebra.static_solve">[docs]</a>    <span class="nd">@staticmethod</span>
