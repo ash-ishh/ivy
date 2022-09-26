@@ -76,19 +76,19 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Data Classes</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../data_classes/container.html">Container</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../data_classes/array.html">Array</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_classes/container.html">Container</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Framework Classes</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../stateful/initializers.html">Initializers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../stateful/converters.html">Converters</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../stateful/optimizers.html">Optimizers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../stateful/module.html">Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../stateful/layers.html">Layers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../stateful/norms.html">Norms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../stateful/activations.html">Activations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../stateful/sequential.html">Sequential</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../stateful/activations.html">Activations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../stateful/module.html">Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../stateful/optimizers.html">Optimizers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../stateful/norms.html">Norms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../stateful/layers.html">Layers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../stateful/initializers.html">Initializers</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Docs</span></p>
 <ul>
@@ -400,8 +400,9 @@
         <span class="bp">self</span><span class="p">:</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NamedTuple</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        ivy.Array instance method variant of ivy.slogdet. This method computes the sign</span>
-<span class="sd">        and natural logarithm of the determinant of an array.</span>
+<span class="sd">        ivy.Array instance method variant of ivy.slogdet. This method simply wraps the</span>
+<span class="sd">        function, and so the docstring for ivy.slogdet also applies to this method with</span>
+<span class="sd">        minimal changes.</span>
 
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -412,21 +413,22 @@
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">        ret</span>
-<span class="sd">            This function returns two values -</span>
+<span class="sd">            This function returns NamedTuple with two values -</span>
 <span class="sd">                sign:</span>
-<span class="sd">                A number representing the sign of the determinant.</span>
+<span class="sd">                An array containing a number representing the sign of the determinant</span>
+<span class="sd">                for each square matrix.</span>
 
-<span class="sd">                logdet:</span>
-<span class="sd">                The natural log of the absolute value of the determinant.</span>
+<span class="sd">                logabsdet:</span>
+<span class="sd">                An array containing natural log of the absolute determinant of each</span>
+<span class="sd">                square matrix.</span>
 
 <span class="sd">        Examples</span>
 <span class="sd">        --------</span>
-
 <span class="sd">        &gt;&gt;&gt; x = ivy.array([[1.0, 2.0], \</span>
-<span class="sd">                          [3.0, 4.0]])</span>
+<span class="sd">                           [3.0, 4.0]])</span>
 <span class="sd">        &gt;&gt;&gt; y = x.slogdet()</span>
 <span class="sd">        &gt;&gt;&gt; print(y)</span>
-<span class="sd">        slogdet(sign=ivy.array(-1.), logabsdet=ivy.array(0.69314718))</span>
+<span class="sd">        slogdet(sign=ivy.array(-1.), logabsdet=ivy.array(0.6931472))</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">ivy</span><span class="o">.</span><span class="n">slogdet</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">)</span></div>
