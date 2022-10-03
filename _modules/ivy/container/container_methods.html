@@ -16392,19 +16392,16 @@
 
 <span class="sd">    Examples</span>
 <span class="sd">    --------</span>
-<span class="sd">    &gt;&gt;&gt; a = ivy.array([[[1.0, 2.0],  \</span>
-<span class="sd">                        [3.0, 4.0]], \</span>
-<span class="sd">                       [[1.0, 2.0],  \</span>
-<span class="sd">                        [2.0, 1.0]], \</span>
-<span class="sd">                       [[1.0, 3.0],  \</span>
-<span class="sd">                        [3.0, 1.0]]])</span>
-<span class="sd">    &gt;&gt;&gt; x = ivy.Container(a=a)</span>
+<span class="sd">    &gt;&gt;&gt; x = ivy.Container(a=ivy.array([[1.0, 2.0],   \</span>
+<span class="sd">                                       [3.0, 4.0]]), \</span>
+<span class="sd">                          b=ivy.array([[1.0, 2.0],   \</span>
+<span class="sd">                                       [2.0, 1.0]]))</span>
 <span class="sd">    &gt;&gt;&gt; y = ivy.Container.static_slogdet(x)</span>
 <span class="sd">    &gt;&gt;&gt; print(y)</span>
 <span class="sd">    {</span>
-<span class="sd">        a: (list[2], &lt;class ivy.array.array.Array&gt; shape=[3])</span>
+<span class="sd">        a: (list[2], &lt;class ivy.array.array.Array&gt; shape=[]),</span>
+<span class="sd">        b: (list[2], &lt;class ivy.array.array.Array&gt; shape=[])</span>
 <span class="sd">    }</span>
-
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">pass</span></div>
 
