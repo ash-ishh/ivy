@@ -838,7 +838,7 @@
 <span class="sd">            floating-point data type determined by :ref:`type-promotion` and </span>
 <span class="sd">            must have shape ``(..., N, M)`` (i.e., must have the same shape as </span>
 <span class="sd">            ``x``, except the innermost two dimensions must be transposed).</span>
-<span class="sd">    </span>
+
 <span class="sd">        Examples</span>
 <span class="sd">        --------</span>
 <span class="sd">        x = ivy.Container(a= ivy.array([[1., 2.],\</span>
@@ -849,7 +849,7 @@
 <span class="sd">            a: ivy.array([[-2., 1.],\</span>
 <span class="sd">               [1.5, -0.5]])</span>
 <span class="sd">        }</span>
-<span class="sd">    </span>
+
 <span class="sd">        x = ivy.Container(a=ivy.array([[1., 2.],\</span>
 <span class="sd">                  [3., 4.]]))</span>
 <span class="sd">        out = ivy.Container(a=ivy.array())</span>
@@ -898,8 +898,8 @@
 <span class="sd">            floating-point data type determined by :ref:`type-promotion` and </span>
 <span class="sd">            must have shape ``(..., N, M)`` (i.e., must have the same shape as </span>
 <span class="sd">            ``x``, except the innermost two dimensions must be transposed).</span>
-<span class="sd">    </span>
-<span class="sd">    </span>
+
+
 <span class="sd">        Examples</span>
 <span class="sd">        --------</span>
 <span class="sd">        x = ivy.Container(a= ivy.array([[1., 2.],\</span>
@@ -910,7 +910,7 @@
 <span class="sd">            a: ivy.array([[-2., 1.],\</span>
 <span class="sd">               [1.5, -0.5]])</span>
 <span class="sd">        }</span>
-<span class="sd">    </span>
+
 <span class="sd">        x = ivy.Container(a=ivy.array([[1., 2.],\</span>
 <span class="sd">                  [3., 4.]]))</span>
 <span class="sd">        out = ivy.Container(a=ivy.array())</span>
@@ -920,7 +920,7 @@
 <span class="sd">            a: ivy.array([[0.0426, 0.0964],\</span>
 <span class="sd">               [0.0605, 0.1368]])</span>
 <span class="sd">        }</span>
-<span class="sd">    </span>
+
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">static_pinv</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
@@ -1378,7 +1378,7 @@
         <span class="n">map_sequences</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Container</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        ivy.Container static instance method variant of ivy.slogdet. This method simply</span>
+<span class="sd">        ivy.Container static method variant of ivy.slogdet. This method simply</span>
 <span class="sd">        wraps the function, and so the docstring for ivy.slogdet also applies to this</span>
 <span class="sd">        method with minimal changes.</span>
 

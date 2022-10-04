@@ -846,7 +846,7 @@
 <span class="sd">    ivy.array([[-2., 1.],[1.5, -0.5]])</span>
 
 <span class="sd">    Using inplace</span>
-<span class="sd">    </span>
+
 <span class="sd">    &gt;&gt;&gt; x = ivy.array([[1.0, 2.0], [5.0, 5.0]])</span>
 <span class="sd">    &gt;&gt;&gt; ivy.inv(x, out=x)</span>
 <span class="sd">    &gt;&gt;&gt; print(x)</span>
@@ -1314,7 +1314,7 @@
 <span class="sd">                [4.]])</span>
 
 <span class="sd">    A 3-D Example</span>
-<span class="sd">    </span>
+
 <span class="sd">    &gt;&gt;&gt; x = ivy.array([[[1., 2.],\</span>
 <span class="sd">                        [3., 4.]],\</span>
 <span class="sd">                       [[5., 6.],\</span>
@@ -1470,7 +1470,7 @@
 <span class="k">def</span> <span class="nf">slogdet</span><span class="p">(</span>
     <span class="n">x</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">,</span> <span class="n">ivy</span><span class="o">.</span><span class="n">NativeArray</span><span class="p">],</span>
     <span class="o">/</span><span class="p">,</span>
-<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">:</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NamedTuple</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Computes the sign and natural logarithm of the determinant of an array.</span>
 
 <span class="sd">    Parameters</span>
